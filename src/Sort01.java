@@ -1,23 +1,28 @@
-//public class Sort01 {
-//}
-
-/*static int[] sort01(int arr[]){
-
-    for(int i=0;i<=arr.length;i++)
-    {
-        if(arr[i]==0)
-        {
-            int zerocount++;
+//import java.util.Array;
+//public class Main {
+    public static int[] sort01(int arr[]) {
+        int n = arr.length;
+        int i = 0, j = n - 1;
+        while (i < j) {
+            if (arr[i] == 1 && arr[j] == 1) {
+                arr[i] = 0;
+                arr[j] = 1;
+            }
+            if (arr[i] == 0) {
+                i++;
+            }
+            if (arr[j] == 1) {
+                j--;
+            }
         }
-        else {
-            int onecount++;
+        return arr;
+    }
+
+    public static void main(String args[]) {
+        int arr[] = {0, 1, 0, 0, 0, 1, 0};
+        sort01(arr);
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(arr[i]);
         }
     }
-    int ans[] = {zerocount,onecount};
-    return ans;
-}
-static void main() {
-    int arr [] = {1,0,0,0,1,0,1,1};
-    sort01(arr);
-}
-*/
+//}

@@ -16,12 +16,12 @@
             j--;
         }
             for (int k : arr)
-                System.out.println(k);
+                System.out.print(" "+k);
         }
 
     static void main()
     {
-        int arr[] ={ 1,2,3,4,5};
+        int arr[] ={ 10,20,30,40,50};
         revArray(arr);
 
     }

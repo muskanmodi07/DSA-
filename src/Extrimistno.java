@@ -10,19 +10,19 @@ static void extrimistno(int arr[]){
     {
         if(i==j)
         {
-            System.out.println(arr[i]);
+            System.out.print(arr[i]+" ");
         return;
         }
         else {
-            System.out.println(arr[i]);
+            System.out.print(arr[i]+" ");
             i++;
-            System.out.println(arr[j]);
+            System.out.print(arr[j]+" ");
             j--;
         }
     }
 }
 static void main()
 {
-    int arr[] = {1,2,3,4,5,6,7,8,9};
+    int arr[] = {1,2,3,4,5,6,7,8,1};
     extrimistno(arr);
 }
