@@ -1,19 +1,24 @@
-static void removeduplicate(int arr[])
-{
-    int n = arr.length;
-    int i,j;
-    while(i<j) {
-        for ( i = 0; i < n - 1; i++) {
-            for ( j = n - 1; j > 0; j++) {
-                if (arr[i] == arr[j]) {
-                    arr[j] = arr[j(arr[n - 1])];
-                }
-            }
+static int removeduplicate(int arr[]){
+    int n= arr.length;
+    int i=0,j=1;
+
+    while(j<n){
+
+        if(arr[i]==arr[j]){
+            j++;
         }
-        System.out.println("Duplicate element not exist");
+        else{
+            //(arr[i]!=arr[j])
+            i++;
+            arr[i]=arr[j];
+            j++;
+        }
     }
+return i+1;
+
 }
 static void main(){
-    int arr[]= {1,3,2,6,1,5,7};
-    removeduplicate(arr);
+    int arr[]={1,2,2,2,2,3,3,4};
+    int ans  = removeduplicate(arr);
+    System.out.println("New length of an array is "+ans);
 }
